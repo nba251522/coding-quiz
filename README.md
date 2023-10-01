@@ -1,4 +1,4 @@
-# Password generator
+# Coding Quiz
 
 ## Technology Used
 
@@ -11,9 +11,9 @@
 
 ## Description
 
-[Visit the Deployed Portfolio](https://nba251522.github.io/password-generator/)
+[Visit the Deployed Portfolio](https://nba251522.github.io/coding-quiz/)
 
-The Password Generator application was created to offer users a fast and easy way to generate a secure password. Having a security through a strong password is extremely important in a time where so much of a users information is stored online.
+The Coding Quiz was designed to test the users coding knowledge while under the pressure of a timer. Each incorrect answer will result in time being taken off the clock. Finish the quiz and it will automatically save your high score.
 
 ![Password Generator Page Image](Develop/images/Webpage%20snip.PNG)
 
@@ -27,12 +27,12 @@ The Password Generator application was created to offer users a fast and easy wa
 
 ## Installation
 
-1. Clone the repository: git@github.com:nba251522/password-generator.git
+1. Clone the repository: git@github.com:nba251522/coding-quiz.git
 2. Open `index.html` in your preferred browser.
 
 ## Usage                                                                            
 
-To generate a secure password, [visit the deployed site](https://nba251522.github.io/thomas-er-porfolio/). Upon arrival, the application will generate a secure password for you.
+To start the quiz, [visit the deployed site](https://nba251522.github.io/coding-quiz/). Click the "Start" button to begin and answer the questions as quickly as possible to secure a high score.
 
 ## Author Info
 
@@ -42,11 +42,12 @@ To generate a secure password, [visit the deployed site](https://nba251522.githu
 
 ## Credits
 
-The creation of this portfolio was aided by insights from the following resources:
+The creation of this quiz was aided by insights from the following resources:
 
 - [W3Schools - JavaScript Tutorial](https://www.w3schools.com/js/)
-- [JavaScript Full Course by SuperSimpleDev - YouTube](https://www.youtube.com/watch?v=SBmSRK3feww)
-
+- [W3Schools - CSS Tutorial](https://www.w3schools.com/css/default.asp)
+- [W3Schools - HTML Tutorial](https://www.w3schools.com/html/default.asp)
+- [JavaScript Full Course by SuperSimpleDev - YouTube](https://www.youtube.com/watch?v=G3e-cpL7ofc&t=1188s&ab_channel=SuperSimpleDev)
 ## License
 
 This project is under the terms of the MIT License.
