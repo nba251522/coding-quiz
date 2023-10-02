@@ -108,5 +108,34 @@ function endGame() {
     document.getElementById('question-container').style.display = 'none';
     document.getElementById('score-container').style.display = 'block';
     document.getElementById('score-value').innerText = score;
+
+    document.getElementById('save-score-btn').addEventListener('click', function() {
+        var initials = document.getElementById('initials').value;
+        if (initials) {  
+            var highscores = JSON.parse(localStorage.getItem('highscores') || "[]");
+            highscores.push({ initials: initials, score: score });
+            localStorage.setItem('highscores', JSON.stringify(highscores));
+            document.getElementById('score-container').style.display = 'none';
+            document.getElementById('quiz-section').classList.add('hidden');
+            document.getElementById('highscores-section').classList.remove('hidden');
+            displayHighScores();
+        } else {
+            alert('Please enter your initials.');
+        }
+    });
 }
+
+function displayHighScores() {
+    var highscoresList = document.getElementById('highscores-list');
+    highscoresList.innerHTML = ''; 
+
+    var highscores = JSON.parse(localStorage.getItem('highscores') || "[]");
+    highscores.forEach(score => {
+        var listItem = document.createElement('li');
+        listItem.textContent = `${score.initials}: ${score.score}`;
+        highscoresList.appendChild(listItem);
+    });
+}
+
+displayHighScores();
 
