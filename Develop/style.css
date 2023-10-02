@@ -8,18 +8,21 @@ body, h1, h2, p, button, label, input {
 body {
   background-color: black;
   color: white;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.6;
+  padding-bottom: 40px;
 }
 
-header, main, footer {
+header, main, p, h1, h2, label {
+  background-color: grey;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+header, main {
   width: 80%;
   max-width: 800px;
   text-align: center;
+  margin: 20px auto;
 }
 
 button {
@@ -50,4 +53,14 @@ input[type="text"] {
 
 .hidden {
   display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
 }
