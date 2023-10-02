@@ -1,6 +1,7 @@
 var timer = 60;
 var currentQuestion = 0;
 var score = 0;
+var feedbackTimeout;
 
 var questions = [
     {
@@ -52,6 +53,7 @@ var questions = [
 
 function displayFeedback(isCorrect) {
     const feedbackDiv = document.getElementById('feedback');
+    clearTimeout(feedbackTimeout);
     if (isCorrect) {
         feedbackDiv.textContent = 'Correct!';
         feedbackDiv.style.color = '#00FF00';
@@ -60,9 +62,9 @@ function displayFeedback(isCorrect) {
         feedbackDiv.style.color = '#FF0000';
     }
     feedbackDiv.style.display = 'block';
-    setTimeout(() => {
+    feedbackTimeout = setTimeout(() => {
         feedbackDiv.style.display = 'none';
-    }, 2000);
+    }, 5000);
 }
 
 document.getElementById('start-btn').addEventListener('click', function() {
