@@ -6,8 +6,53 @@ var questions = [
     {
         question: "What does HTML stand for?",
         answers: ["Hyper Trainer Marking Language", "Hyper Text Marketing Language", "Hyper Text Markup Language", "Hyper Transfer Markup Language"],
+        correct: 2
+    },
+    {
+        question: "Which tag is used to insert a line break in HTML?",
+        answers: ["<lb>", "<br>", "<linebreak>", "<breakline>"],
         correct: 1
     },
+    {
+        question: "Which property in CSS is used to change the background color?",
+        answers: ["bgcolor", "color", "background-color", "background"],
+        correct: 2
+    },
+    {
+        question: "What does CSS stand for?",
+        answers: ["Computer Style Sheets", "Cascading Style Structure", "Cascading Style Sheets", "Computer Style Structure"],
+        correct: 2
+    },
+    {
+        question: "Which of the following is a JavaScript library?",
+        answers: ["jQuery", "Python", "PHP", "HTML"],
+        correct: 0
+    },
+    {
+        question: "Which tag in HTML is used to create a hyperlink?",
+        answers: ["<hl>", "<ahref>", "<link>", "<a>"],
+        correct: 3
+    },
+    {
+        question: "Which of the following is NOT a valid HTTP method?",
+        answers: ["FETCH", "POST", "GET", "PUT"],
+        correct: 0
+    },
+    {
+        question: "What symbol is used to select an element with a specific class in CSS?",
+        answers: ["#", ".", "%", "!"],
+        correct: 1
+    },
+    {
+        question: "In which array method in JavaScript can you check if at least one element passes a test?",
+        answers: ["every()", "some()", "find()", "filter()"],
+        correct: 1
+    },
+    {
+        question: "Which of these is NOT a way to store data in a user's browser?",
+        answers: ["Session Storage", "Cookies", "Local Storage", "Disk Storage"],
+        correct: 3
+    }
 ];
 
 document.getElementById('start-btn').addEventListener('click', function() {
