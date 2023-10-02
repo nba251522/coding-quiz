@@ -54,3 +54,8 @@ input[type="text"] {
 .hidden {
   display: none;
 }
+
+#start-btn {
+  display: block;
+  margin: 20px auto;
+}

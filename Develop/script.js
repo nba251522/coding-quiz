@@ -139,14 +139,14 @@ function displayHighScores() {
 
 displayHighScores();
 
-document.getElementById('play-again-btn').addEventListener('click', function() {
+function playAgain() {
     timer = 60;
     currentQuestion = 0;
     score = 0;
-    
-    document.getElementById('highscores-section').classList.add('hidden');    
+    document.getElementById('highscores-section').classList.add('hidden');
     document.getElementById('quiz-section').classList.remove('hidden');
     document.getElementById('start-btn').style.display = 'block';
-    document.getElementById('question-container').style.display = 'none'; 
+    document.getElementById('question-container').style.display = 'none';
     document.getElementById('time-value').innerText = timer;
-});
+}
+document.getElementById('play-again-btn').addEventListener('click', playAgain);
