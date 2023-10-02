@@ -50,6 +50,21 @@ var questions = [
     }
 ];
 
+function displayFeedback(isCorrect) {
+    const feedbackDiv = document.getElementById('feedback');
+    if (isCorrect) {
+        feedbackDiv.textContent = 'Correct!';
+        feedbackDiv.style.color = '#00FF00';
+    } else {
+        feedbackDiv.textContent = 'Incorrect!';
+        feedbackDiv.style.color = '#FF0000';
+    }
+    feedbackDiv.style.display = 'block';
+    setTimeout(() => {
+        feedbackDiv.style.display = 'none';
+    }, 2000);
+}
+
 document.getElementById('start-btn').addEventListener('click', function() {
     this.style.display = 'none';
     shuffle(questions);
@@ -82,15 +97,17 @@ function displayQuestion() {
     container.innerHTML = '';
     document.getElementById('question-text').innerText = q.question;
 
-    for (var i = 0; i < q.answers.length; i++) {
+     for (var i = 0; i < q.answers.length; i++) {
         (function(index) {
             var btn = document.createElement('button');
             btn.innerText = q.answers[index];
             btn.addEventListener('click', function(e) {
                 if (index === q.correct) {
                     score++;
+                    displayFeedback(true);
                 } else {
                     timer -= 10; 
+                    displayFeedback(false);
                 }
     
                 if (currentQuestion < questions.length - 1) {
