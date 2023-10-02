@@ -9,58 +9,61 @@ var questions = [
         correct: 2
     },
     {
-        question: "Which tag is used to insert a line break in HTML?",
-        answers: ["<lb>", "<br>", "<linebreak>", "<breakline>"],
-        correct: 1
-    },
-    {
-        question: "Which property in CSS is used to change the background color?",
-        answers: ["bgcolor", "color", "background-color", "background"],
-        correct: 2
-    },
-    {
-        question: "What does CSS stand for?",
-        answers: ["Computer Style Sheets", "Cascading Style Structure", "Cascading Style Sheets", "Computer Style Structure"],
-        correct: 2
-    },
-    {
-        question: "Which of the following is a JavaScript library?",
-        answers: ["jQuery", "Python", "PHP", "HTML"],
-        correct: 0
-    },
-    {
-        question: "Which tag in HTML is used to create a hyperlink?",
-        answers: ["<hl>", "<ahref>", "<link>", "<a>"],
+        question: "Which CSS attribute alters the background shade of an element?",
+        answers: ["background", "color", "bgcolor", "background-color"],
         correct: 3
     },
     {
-        question: "Which of the following is NOT a valid HTTP method?",
-        answers: ["FETCH", "POST", "GET", "PUT"],
-        correct: 0
-    },
-    {
-        question: "What symbol is used to select an element with a specific class in CSS?",
-        answers: ["#", ".", "%", "!"],
-        correct: 1
-    },
-    {
-        question: "In which array method in JavaScript can you check if at least one element passes a test?",
-        answers: ["every()", "some()", "find()", "filter()"],
-        correct: 1
-    },
-    {
-        question: "Which of these is NOT a way to store data in a user's browser?",
-        answers: ["Session Storage", "Cookies", "Local Storage", "Disk Storage"],
+        question: "CSS is an acronym for what?",
+        answers: ["Computer Style Structure", "Computer Style Sheets", "Cascading Style Structure", "Cascading Style Sheets"],
         correct: 3
+    },
+    {
+        question: "Identify the JavaScript library from the options below.",
+        answers: ["HTML", "Python", "jQuery", "PHP"],
+        correct: 2
+    },
+    {
+        question: "Which HTML tag is employed to produce clickable links?",
+        answers: ["<ahref>", "<hl>", "<link>", "<a>"],
+        correct: 3
+    },
+    {
+        question: "Which is not recognized as a valid HTTP verb?",
+        answers: ["PUT", "GET", "FETCH", "POST"],
+        correct: 2
+    },
+    {
+        question: "Which character in CSS denotes an element with a particular class name?",
+        answers: ["%", "#", "!", "."],
+        correct: 3
+    },
+    {
+        question: "Which JavaScript method verifies if any element in an array satisfies the provided test?",
+        answers: ["filter()", "find()", "some()", "every()"],
+        correct: 2
+    },
+    {
+        question: "What is not a method to retain data on the browser of a user?",
+        answers: ["Cookies", "Disk Storage", "Session Storage", "Local Storage"],
+        correct: 1
     }
 ];
 
 document.getElementById('start-btn').addEventListener('click', function() {
     this.style.display = 'none';
+    shuffle(questions);
     document.getElementById('question-container').style.display = 'block';
     startTimer();
     displayQuestion();
 });
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 
 function startTimer() {
     var timerInterval = setInterval(function() {
