@@ -54,13 +54,3 @@ input[type="text"] {
 .hidden {
   display: none;
 }
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: grey;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-}
