@@ -158,6 +158,7 @@ function displayHighScores() {
 
 displayHighScores();
 
+document.getElementById('play-again-btn').addEventListener('click', playAgain);
 function playAgain() {
     timer = 60;
     currentQuestion = 0;
@@ -168,4 +169,17 @@ function playAgain() {
     document.getElementById('question-container').style.display = 'none';
     document.getElementById('time-value').innerText = timer;
 }
-document.getElementById('play-again-btn').addEventListener('click', playAgain);
+
+document.getElementById('view-highscores-btn').addEventListener('click', toggleHighscores);
+function toggleHighscores() {
+    const quizSection = document.getElementById('quiz-section');
+    const highscoresSection = document.getElementById('highscores-section');
+    
+    if (quizSection.classList.contains('hidden')) {
+        quizSection.classList.remove('hidden');
+        highscoresSection.classList.add('hidden');
+    } else {
+        quizSection.classList.add('hidden');
+        highscoresSection.classList.remove('hidden');
+    }
+}
