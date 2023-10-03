@@ -149,9 +149,10 @@ function displayHighScores() {
     highscoresList.innerHTML = ''; 
 
     var highscores = JSON.parse(localStorage.getItem('highscores') || "[]");
-    highscores.forEach(score => {
+    highscores.sort((a, b) => b.score - a.score);
+    highscores.forEach((score, index) => {
         var listItem = document.createElement('li');
-        listItem.textContent = `${score.initials}: ${score.score}`;
+        listItem.textContent = `${index + 1}. ${score.initials}: ${score.score}`;       
         highscoresList.appendChild(listItem);
     });
 }

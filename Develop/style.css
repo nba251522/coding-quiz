@@ -69,8 +69,17 @@ input[type="text"] {
   margin: 10px 0;
   text-align: center;
 }
+
 #view-highscores-btn {
   position: absolute;
   top: 10px;  
   left: 10px; 
+}
+
+#highscores-list {
+  list-style-type: none;
+  text-align: left;
+  width: fit-content; 
+  margin-left: auto; 
+  margin-right: auto;
 }
